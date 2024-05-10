@@ -1,4 +1,4 @@
-<h1>Svelte+SvelteKit+SQLite3 Starter Kit</h1>
+<h1>Svelte+SvelteKit+PostgreSQL Starter Kit</h1>
 <slot />
 
 <hr/>

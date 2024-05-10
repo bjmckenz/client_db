@@ -15,7 +15,7 @@
 	</div>
 {/each}
 
-<span class=i>(database lives in data/containers.db)</span>
+<span class=i>(database lives in PostgreSQL)</span>
 
 <style>
 	.id {
