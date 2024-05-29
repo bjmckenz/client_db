@@ -8,10 +8,10 @@
 
 {#each data.containers as container}
 	<div>
-		<span class="id">{container.containerNumber}</span>
-		<span class="name">{container.nameOfShip}</span>
-		<span class="size">{container.containerSize}</span>
-		<span class="date">{container.dateContainerShipped}</span>
+		<span class="id">{container.containernumber}</span>
+		<span class="name">{container.nameofship}</span>
+		<span class="size">{container.containersize}</span>
+		<span class="date">{container.datecontainershipped}</span>
 	</div>
 {/each}
 
