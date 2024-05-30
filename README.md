@@ -20,6 +20,6 @@
 
 6. npm install
 
-7. node run dev
+7. npm run dev
 
 *Comments and feedback welcome!*
