@@ -9,7 +9,7 @@
 2.  you have git installed.
 
 3. you have Node.js installed
-   
+
 # running:
 
 1. git clone this
@@ -39,6 +39,6 @@
 
 # Where am I deployed?
 
-<enter your URL here>
+*Replace this entire line with the URL*
 
 
