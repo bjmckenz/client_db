@@ -1,6 +1,8 @@
 
 import sql from '$lib/server/database';
 
+let sortby = 'containernumber';
+
 export async function load() {
     const rows = await sql`
     SELECT
@@ -9,7 +11,9 @@ export async function load() {
         containerSize,
         dateContainerShipped
     FROM
-        containers`;
+        containers
+    ORDER BY
+        ${sql(sortby)}`;
 
     console.log({rows});
 
@@ -17,6 +21,16 @@ export async function load() {
 }
 
 export const actions = {
+    sort: async ({ request }) => {
+		const data = await request.formData();
+        const newSort = data.get('sortby');
+        sortby = newSort;
+        return {
+            success: true,
+            message: 'Sort order changed'
+        };
+    },
+
 	add: async ({ request }) => {
 		const data = await request.formData();
         const containerNumber = data.get('containerNumber');

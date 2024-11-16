@@ -5,6 +5,11 @@
 
 <h1>Fetched from Database</h1>
 
+Sort by: <form action="?/sort" method=post><input type=hidden name=sortby value=containernumber /><button>Container Number</button></form>
+<form action="?/sort" method=post><input type=hidden name=sortby value=containersize /><button>Container Size</button></form>
+
+<br/>
+
 {#each data.containers as container}
 	<div>
 		<span class="id">{container.containernumber}</span>
@@ -14,9 +19,12 @@
 	</div>
 {/each}
 
+<br/>
 <span class=i>(database lives in PostgreSQL)</span>
+<br/>
 
 {#if form?.message}<h3>{form.message}</h3>{/if}
+<p>Add a new Container:</p>
 
 <form action="?/add" method="post">
 	<input type="text" name="containerNumber" placeholder="Container Number">
